@@ -1,0 +1,12 @@
+class Solution:
+    def isPowerOfThree(self, n: int) -> bool:
+        #constraints -2147483648 <= n <= 2147483647
+        powers_hashtable = {}
+        
+        for i in range(1,23):
+            powers_hashtable[i] = 3 **i
+            
+        
+        if n in powers_hashtable.values() or n ==1:
+            return True
+        return False
